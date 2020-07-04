@@ -1,0 +1,42 @@
+package baekjoon;
+import java.util.Scanner;
+public class Num1427 {
+
+	public static void main(String[] args) {
+		int[] arr=new int[10];
+		int p=10;	// 자릿수
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int N=1000000000;
+		boolean checkNum=false;
+		for(int i=0;i<10;i++) {
+			int k=n/N;
+			// 몫이 1 미만일 경우
+			// ex: 2143을 10000으로 나누면 0
+			if(k==0 && checkNum==false) {
+				N/=10;
+				p-=1;
+				continue;
+			}
+			// 몫이 1 이상 
+			// ex: 2143을 1000으로 나누면 2
+			checkNum=true;
+			arr[i]=k;
+			n-=k*N;
+			N/=10;
+		}
+		for(int i=0;i<10;i++) {
+			int max=arr[i];
+			for(int j=i;j<10;j++) {
+				if(max<arr[j]) {
+					int tmp=max;
+					max=arr[j];
+					arr[j]=tmp;
+				}
+			}
+			arr[i]=max;
+		}
+		for(int i=0;i<p;i++)
+			System.out.print(arr[i]);
+	}
+}
