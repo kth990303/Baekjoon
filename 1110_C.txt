@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+	int a, ans = 0, cnt = 0;
+	scanf("%d", &a);
+	if (a < 10)
+		a = a * 10;
+	ans = a;
+	while (1) {
+		a = ((a / 10 + a % 10) % 10) + (a % 10) * 10;
+		cnt++;
+		if (a == ans)
+			break;
+	}
+
+	printf("%d", cnt);
+}
