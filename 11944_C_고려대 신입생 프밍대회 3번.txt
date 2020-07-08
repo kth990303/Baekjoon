@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+	int n, m,k=0; 
+	int size = 0;	// n이 몇자리 수인지
+	scanf("%d %d", &n, &m);
+	char a[4];	// 숫자를 문자열에 저장
+	int tmp = n;
+	while (n != 0) {	// a[3]부터 저장 201이면 a[3] a[2] a[1]
+		a[k++] = (n % 10)+'0';
+		n /= 10;
+		size++;
+	}
+	int i,j, len=0;
+	for (i = 0; i < tmp; i++) {
+		if (size + len > m) {	// 만약 답이 클 경우 m까지만
+			for (j = 0; j < m - len; j++) {
+				printf("%c", a[size - 1 - j]);
+				
+			}
+			return 0;
+		}
+		else {
+			len += size;
+			printf("%d", tmp);
+		}
+
+	}
+}
