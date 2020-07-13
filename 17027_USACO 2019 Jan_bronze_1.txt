@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    int* swap1 = new int[n];
+    int* swap2 = new int[n];
+    int* cho = new int[n];
+    int arr[3] = { 0 }; // 어디에 조약돌이 있는지
+    int score[3] = { 0 };
+    // 입력받음.
+    for (size_t i = 0; i < n; i++) {
+        cin >> swap1[i] >> swap2[i] >> cho[i];
+    }
+    // g가 0일 때, 1일 때, 2일 때
+    for (size_t i = 0; i < 3; i++) {
+        //조약돌 위치 초기화
+        arr[0] = arr[1] = arr[2] = 0;
+        arr[i] = 1; //조약돌이 있는 곳 1
+        for (size_t j = 0; j < n; j++) {
+            //swap
+            int tmp = arr[swap1[j] - 1];
+            arr[swap1[j] - 1] = arr[swap2[j] - 1];
+            arr[swap2[j] - 1] = tmp;
+            //있으면 1점
+            if (arr[cho[j] - 1] == 1)
+                score[i]++;
+        }
+    }
+    int max = score[0];
+    for (size_t i = 1; i < 3; i++) {
+        if (score[i] > max)
+            max = score[i];
+    }
+    cout << max;
+    delete[] swap1;
+    delete[] swap2;
+    delete[] cho;
+}
