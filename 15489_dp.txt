@@ -1,0 +1,30 @@
+// 200830 #15489 파스칼 삼각형 Bronze I
+// 전형적인 이항계수/파스칼삼각형 dp
+#include <iostream>
+using namespace std;
+const int MAX=31;
+int R, C, W;
+int d[MAX][MAX];
+int main(){
+	cin.tie(0);
+	cout.tie(0);
+	ios::sync_with_stdio(false);
+	
+	cin>>R>>C>>W;
+	for(int i=1;i<=R+W;i++){
+		for(int j=1;j<=i;j++){
+			if(j==1 || j==i)
+				d[i][j]=1;
+			else
+				d[i][j]=d[i-1][j-1]+d[i-1][j];
+		}
+	}
+	
+	int ans=0;
+	for(int i=0;i<W;i++){
+		for(int j=0;j<i+1;j++){
+			ans+=d[R+i][C+j];
+		}
+	}
+	cout<<ans<<"\n";
+}
