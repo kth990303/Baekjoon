@@ -5,7 +5,7 @@
 using namespace std;
 typedef long long ll;
 const int MAX = 1000001;
-ll a[MAX], d[MAX], N, K, ans;
+ll a[MAX], N, K, ans;
 int main() {
 	cin.tie(0);
 	cout.tie(0);
