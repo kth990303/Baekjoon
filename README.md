@@ -1,2 +1,8 @@
 # Baekjoon
-백준 문제들을 풀고 올리는 레포지토리
+### Almost files consist of C++
+ - kth990303 loves <strong>Algorithm</strong> more than developing 
+
+<hr>
+
+ - files name: question numbers _ using algorithm
+ - Introduce file: using algorithm
