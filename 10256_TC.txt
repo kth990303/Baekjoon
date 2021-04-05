@@ -1,0 +1,33 @@
+2
+6 4
+ATGGAT
+AGGT
+6 4
+ATGGAT
+AGCT
+ans:
+3
+0
+
+
+2
+6 4
+ATGGAT
+AGCT
+8 2
+GTACCTAC
+CT
+ans: 
+0
+1
+
+2
+8 2
+GTACCTAC
+CT
+6 4
+ATGGAT
+AGCT
+ans:
+1
+0
