@@ -1,6 +1,6 @@
 // 210516 #17469 Æ®¸®ÀÇ »ö±ò°ú Äõ¸® Platinum III
-// offline_query + small_to_large + union_find
-// O(Nlg^2N)
+// offline_query,small_to_large,union_find
+// O(Qlg^2N)
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -15,13 +15,13 @@ int find(int a) {
 		return a;
 	return p[a] = find(p[a]);
 }
-// O(lgn) * small_to_large => O(nlg^2n)
+// O(lgn) * small_to_large => O(lg^2(n))
 bool merge(int a, int b) {
 	a = find(a);
 	b = find(b);
 	if (a == b)
 		return false;
-	// small to large -> set insert o(nlgn)
+	// small to large -> set insert o(lgn)
 	if (S[a].size() <= S[b].size())
 		swap(a, b);
 	p[b] = a;
