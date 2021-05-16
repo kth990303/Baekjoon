@@ -15,7 +15,7 @@ int find(int a) {
 		return a;
 	return p[a] = find(p[a]);
 }
-// O(lgn) * small_to_large => O(lg^2n)
+// O(lgn) * small_to_large => O(nlg^2n)
 bool merge(int a, int b) {
 	a = find(a);
 	b = find(b);
