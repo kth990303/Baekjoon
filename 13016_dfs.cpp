@@ -1,5 +1,5 @@
 // 210608 #13016 ³» ¿Ş¼Õ¿¡´Â Èæ¿°·æÀÌ Àáµé¾î ÀÖ´Ù Platinum V
-// dfs + tree's diameter
+// dfs +tree's diameter
 #include <iostream>
 #include <algorithm>
 #include <string>
