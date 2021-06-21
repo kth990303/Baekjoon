@@ -1,0 +1,57 @@
+3 13
+.C.....P.X...
+XX.......X..P
+XX.....C.....
+ans: 6
+
+1 1
+.
+ans: 0
+
+2 2
+PP
+PP
+ans: 0
+
+3 3
+PPP
+...
+CCP
+ans: 2
+
+5 4
+...X
+X..X
+CX..
+X..P
+PPPP
+ans: -1
+
+5 4
+X..P
+CXXX
+..C.
+.XXX
+PPPP
+ans: 4
+
+5 6
+.PXX.C
+PCP..X
+XPX...
+CX....
+......
+ans: 8
+
+3 3
+PCC
+PCP
+CPP
+ans: 1
+
+4 4
+XPPX
+CPXP
+CC.C
+CPPC
+ans: 3
