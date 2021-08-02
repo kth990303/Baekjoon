@@ -40,6 +40,10 @@ int main() {
 
 	sieve();
 	while (cin >> N && N) {
+		if (N == 1) {
+			cout << 0 << "\n";
+			continue;
+		}
 		cout << solve() << "\n";
 	}
 }
