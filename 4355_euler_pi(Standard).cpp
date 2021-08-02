@@ -19,7 +19,7 @@ void sieve() {
 }
 int solve() {
 	int ret = N, n = N;
-	for (int i = 2; i * i < N; i++) {
+	for (int i = 2; i * i <= N; i++) {
 		if (n == 1)
 			break;
 		if (isPrime[i] && !(n % i)) {
