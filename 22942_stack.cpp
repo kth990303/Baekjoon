@@ -12,7 +12,10 @@ typedef pair<int, int> pi;
 typedef pair<ll, ll> pl;
 const int MAX = 200001;
 vector<pl> v, res;
-int N;
+int N, n;
+bool cmp(pl p1, pl p2) {
+	return p1.first - p1.second < p2.first - p2.second;
+}
 int main() {
 	cin.tie(0)->sync_with_stdio(0);
 
@@ -20,13 +23,15 @@ int main() {
 	v.resize(N);
 	for (int i = 0; i < N; i++)
 		cin >> v[i].first >> v[i].second;
-	sort(all(v));
+	sort(all(v), cmp);
 	for (int i = 0; i < N; i++) {
 		ll c = v[i].first;
 		ll r = v[i].second;
-		while (!res.empty() && res.back().first + res.back().second < c - r)
+		while (!res.empty() && res.back().first + res.back().second < c - r) {
 			res.pop_back();
-		if (res.empty() || 
+			n = res.back().first + res.back().second;
+		}
+		if (res.empty() ||
 			abs(res.back().second - r) > c - res.back().first)
 			res.push_back(v[i]);
 		else {
