@@ -1,3 +1,5 @@
+// 211028 #13510 트리와쿼리1 Platinum I
+// HLD(Standard)
 #include <iostream>
 #include <algorithm>
 #include <string>
