@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int calScore(string str) {
+	int score = 0;
+	int d = 0; //연속된 O의 길이
+	for (size_t i = 0; i < str.length(); i++) {
+		// O의 아스키코드는 79, X는 88
+		if (str[i] == 79) {
+			score++;
+			// 연속된 만큼 추가점수를 줍니다.
+			score += (d++);
+		}
+		else
+			// X가 나오면 초기화
+			d = 0;
+	}
+	return score;
+}
+int main() {
+	// cout와 cin을 untie합니다. 속도가 빨라집니다.
+	cin.tie(NULL);
+	// c++ stream만 사용합니다. 속도가 빨라집니다.
+	ios_base::sync_with_stdio(false);
+
+	int n;
+	cin >> n;
+	for (size_t i = 0; i < n; i++) {
+		string str;
+		cin >> str;
+		cout << calScore(str) << "\n";
+	}
+}
