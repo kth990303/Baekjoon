@@ -1,5 +1,6 @@
-// 210617 #20930 우주정거장 Platinum V
-// line sweeping disjoint_set
+// 220111 #19530 우주정거장 Platinum V
+// update. 210111
+// DSU, sweeping
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -66,7 +67,7 @@ int main() {
 		p[i] = i;
 		v[i].index = i;
 	}
-	sort(all(v), cmpX); 
+	sort(all(v), cmpX);
 	int mx = v[0].p1.x;
 	int Mx = v[0].p2.x;
 	int idx = v[0].index;
@@ -79,7 +80,7 @@ int main() {
 			Mx = v[i].p2.x;
 			continue;
 		}
-		Mx = v[i].p2.x;
+		Mx = max(Mx, v[i].p2.x);
 		if (find(idx) != find(v[i].index))
 			merge(idx, v[i].index);
 	}
@@ -100,7 +101,7 @@ int main() {
 			My = v[i].p2.y;
 			continue;
 		}
-		My = v[i].p2.y;
+		My = max(My, v[i].p2.y);
 		if (find(idx) != find(v[i].index))
 			merge(idx, v[i].index);
 	}
@@ -111,7 +112,7 @@ int main() {
 		int a, b;
 		cin >> a >> b;
 		a--; b--;
-		if (find(a)==find(b))
+		if (find(a) == find(b))
 			cout << 1 << "\n";
 		else
 			cout << 0 << "\n";
