@@ -1,5 +1,6 @@
-// 210407 #14676 영우는 사기꾼? Gold IV
-// indegree like topology sort
+// 220111 #14676 영우는사기꾼? Gold III
+// indegree graph
+// update 22.01.11.
 #include <iostream>
 #include <algorithm>
 #include <queue>
@@ -29,6 +30,7 @@ int main() {
 				return 0;
 			}
 			cnt[a]++;
+			if (cnt[a] > 1)continue;
 			for (auto i : v[a]) {
 				indegree[i]--;
 			}
@@ -39,6 +41,7 @@ int main() {
 				return 0;
 			}
 			cnt[a]--;
+			if (cnt[a])continue;
 			for (auto i : v[a]) {
 				indegree[i]++;
 			}
