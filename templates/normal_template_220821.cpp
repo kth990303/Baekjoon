@@ -9,10 +9,9 @@ typedef pair<int,pi> pii;
 const int MAX = 2e5+7;
 const int INF = 0x3f3f3f3f3f3f3f3f;
 const int MOD = 1e9 + 7;
-int t;
+int t,N;
 int32_t main() {
     cin.tie(0)->sync_with_stdio(0);
-    int N,M,a[MAX],ans=0;
     cin>>N;
 
 }
