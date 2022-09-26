@@ -9,7 +9,7 @@ typedef pair<int,pi> pii;
 typedef pair<ll, ll> pl;
 typedef pair<ll, pl> pll;
 const int MAX = 5e4+7;
-const int INF = 0x3f3f3f3f3f3f3f3f;
+const int INF = 0x3f3f3f3f;
 const ll LNF=0x3f3f3f3f3f3f3f3f;
 const int MOD = 1e9 + 7;
 int N;
