@@ -1,6 +1,7 @@
 # Baekjoon
 ### Almost files consist of C++
- - kth990303 loves <strong>Algorithm</strong> more than developing 
+ - ~(~2021) kth990303 loves <strong>Algorithm</strong> more than developing~
+ - (2022~) kth990303 loves **Backend Developing** more than **Algorithm**
 
 <hr>
 
